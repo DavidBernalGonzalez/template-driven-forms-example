@@ -22,8 +22,11 @@ export class MyFormComponent implements OnInit {
     ];
   }
 
-  onSubmitForm(value: any): void{
-    console.log(value);
+  onSubmitForm(formData: any): void{
+    console.log(formData);
+    if (formData.form.status === 'VALID'){
+      console.log(formData.value);
+    }
   }
 
   ngOnInit(): void {}
